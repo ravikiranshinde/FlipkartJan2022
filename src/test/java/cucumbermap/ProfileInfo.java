@@ -22,6 +22,11 @@ public class ProfileInfo
 	@When("user enters {string} as First Name")
 	public void user_enters_as_first_name(String string)
 	{
+		Object[] input1=new Object[1];
+        input1[0]="";
+    Hashtable<String, Object> output1=SeleniumOperators.clickOnElementForSleep(input1);
+        
+  HTMLReportGenerator.StepDetails(output1.get("STATUS").toString(), "user enters {string} as First Name", output1.get("MESSAGE").toString());
 	   
 	}
 
